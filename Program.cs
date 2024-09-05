@@ -23,8 +23,7 @@ internal class Program
                     break;
                 case 3:
                     Console.WriteLine("Nome do funcionario");
-                    string nomeTrabalhador =Console.ReadLine();
-                    Worker worker1 = worker.Find(x=>x.Name.Equals(nomeTrabalhador));
+                     Worker worker1 = worker.Find(x=>x.Name.Equals(Console.ReadLine()));
                     if(worker1 != null) worker1.AddContract(Principal.CreateContract());
                     else Console.WriteLine("nao encontrado");
                     break;
